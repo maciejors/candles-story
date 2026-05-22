@@ -11,7 +11,7 @@ const firebaseConfig = {
 	storageBucket: 'candles-story.firebasestorage.app',
 	messagingSenderId: '519402620284',
 	appId: '1:519402620284:web:82aadffcda9db1731cd0f9',
-	measurementId: 'G-PLW8W7ZK1F'
+	measurementId: 'G-PLW8W7ZK1F',
 };
 
 // Initialize Firebase
