@@ -1,2 +1,43 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
+
+.root-container {
+	@apply min-h-screen font-forum;
+	background: linear-gradient(90deg, rgba(255, 247, 173, 0.355), rgba(255, 169, 249, 0.41));
+}
+
+a {
+	cursor: pointer;
+}
+
+/* Fonts */
+
+@font-face {
+	font-family: 'Forum';
+	src: url('/fonts/Forum/Forum-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Alice';
+	src: url('/fonts/Alice/Alice-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Herr Von Muellerhoff';
+	src: url('/fonts/Herr_Von_Muellerhoff/Herr_Von_Muellerhoff-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@theme {
+	--font-forum: 'Forum';
+	--font-alice: 'Forum';
+	--font-fancy: 'Herr Von Muellerhoff';
+}
