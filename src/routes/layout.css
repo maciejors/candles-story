@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import 'tailwindcss/utilities';
 @plugin '@tailwindcss/forms';
 
 .root-container {
@@ -8,6 +9,14 @@
 
 a {
 	cursor: pointer;
+}
+
+h1 {
+	@apply font-fancy text-7xl;
+}
+
+h2 {
+	@apply font-alice text-xl font-bold uppercase;
 }
 
 /* Fonts */
@@ -30,7 +39,7 @@ a {
 
 @font-face {
 	font-family: 'Herr Von Muellerhoff';
-	src: url('/fonts/Herr_Von_Muellerhoff/Herr_Von_Muellerhoff-Regular.ttf') format('truetype');
+	src: url('/fonts/Herr_Von_Muellerhoff/HerrVonMuellerhoff-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
