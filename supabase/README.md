@@ -18,3 +18,9 @@ If you made changes directly via the Supabase Dashboard UI, pull them into a loc
 ```bash
 npx supabase db diff --use-migra -f <migration_name>
 ```
+
+## TypeScript
+
+```bash
+npx supabase gen types typescript --project-id jitswxfrykrzjctloeog > ./src/lib/supabase/database.types.ts
+```
