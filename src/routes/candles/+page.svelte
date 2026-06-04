@@ -3,6 +3,7 @@
 	import { fetchAllProducts } from '$lib/supabase/db/products';
 	import Spinner from '$lib/components/Spinner.svelte';
 	import Footer from '$lib/components/Footer.svelte';
+	import ErrorContainer from '$lib/components/ErrorContainer.svelte';
 
 	const query = createQuery(() => ({
 		queryKey: ['products'],
@@ -16,7 +17,7 @@
 			<Spinner />
 		</div>
 	{:else if query.isError}
-		<p>Przepraszamy, wystąpił błąd</p>
+		<ErrorContainer error={query.error} />
 	{:else if query.isSuccess}
 		<ul>
 			{#each query.data as product (product.id)}

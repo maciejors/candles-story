@@ -1,5 +1,4 @@
 @import 'tailwindcss';
-@import 'tailwindcss/utilities';
 @plugin '@tailwindcss/forms';
 
 .bg-classic-gradient {
@@ -45,8 +44,8 @@ h2 {
 }
 
 @theme {
-	--font-forum: 'Forum';
-	--font-alice: 'Forum';
-	--font-fancy: 'Herr Von Muellerhoff';
+	--font-forum: 'Forum', sans-serif;
+	--font-alice: 'Alice', sans-serif;
+	--font-fancy: 'Herr Von Muellerhoff', sans-serif;
 	--color-accent: var(--color-gray-400);
 }
