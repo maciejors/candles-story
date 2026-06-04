@@ -22,5 +22,5 @@ npx supabase db diff --use-migra -f <migration_name>
 ## TypeScript
 
 ```bash
-npx supabase gen types typescript --project-id jitswxfrykrzjctloeog > ./src/lib/supabase/database.types.ts
+npx supabase gen types typescript --project-id wvbgkjlbbwbeluzmgypw > ./src/lib/supabase/database.types.ts
 ```

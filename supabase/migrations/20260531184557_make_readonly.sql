@@ -1,8 +1,17 @@
--- 1. Revoke write permissions on the public schema from all users
-REVOKE INSERT, UPDATE, DELETE, TRUNCATE ON ALL TABLES IN SCHEMA public FROM public;
+-- 1. Enable RLS on all tables
+ALTER TABLE categories ENABLE ROW LEVEL SECURITY;
+ALTER TABLE fragrances ENABLE ROW LEVEL SECURITY;
+ALTER TABLE colors ENABLE ROW LEVEL SECURITY;
+ALTER TABLE products ENABLE ROW LEVEL SECURITY;
+ALTER TABLE tiered_pricing ENABLE ROW LEVEL SECURITY;
+ALTER TABLE packaging_options ENABLE ROW LEVEL SECURITY;
+ALTER TABLE product_display_order ENABLE ROW LEVEL SECURITY;
 
--- 2. Ensure future tables also default to read-only
-ALTER DEFAULT PRIVILEGES IN SCHEMA public REVOKE INSERT, UPDATE, DELETE, TRUNCATE ON TABLES FROM public;
-
--- 3. Set the entire database configuration to read-only (Global safety switch)
-ALTER DATABASE postgres SET default_transaction_read_only = on;
+-- 2. Create policies allowing public read-only access (SELECT only)
+CREATE POLICY "Allow public read-only access" ON categories FOR SELECT USING (true);
+CREATE POLICY "Allow public read-only access" ON fragrances FOR SELECT USING (true);
+CREATE POLICY "Allow public read-only access" ON colors FOR SELECT USING (true);
+CREATE POLICY "Allow public read-only access" ON products FOR SELECT USING (true);
+CREATE POLICY "Allow public read-only access" ON tiered_pricing FOR SELECT USING (true);
+CREATE POLICY "Allow public read-only access" ON packaging_options FOR SELECT USING (true);
+CREATE POLICY "Allow public read-only access" ON product_display_order FOR SELECT USING (true);
