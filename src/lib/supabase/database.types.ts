@@ -117,7 +117,7 @@ export type Database = {
       products: {
         Row: {
           base_price: number | null
-          category_id: number | null
+          category_id: number
           customization_allowed: boolean
           description: string | null
           diameter_cm: number | null
@@ -130,7 +130,7 @@ export type Database = {
         }
         Insert: {
           base_price?: number | null
-          category_id?: number | null
+          category_id: number
           customization_allowed?: boolean
           description?: string | null
           diameter_cm?: number | null
@@ -143,7 +143,7 @@ export type Database = {
         }
         Update: {
           base_price?: number | null
-          category_id?: number | null
+          category_id?: number
           customization_allowed?: boolean
           description?: string | null
           diameter_cm?: number | null
