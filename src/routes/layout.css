@@ -2,9 +2,8 @@
 @import 'tailwindcss/utilities';
 @plugin '@tailwindcss/forms';
 
-.root-container {
-	@apply min-h-screen font-forum;
-	background: linear-gradient(90deg, rgba(255, 247, 173, 0.355), rgba(255, 169, 249, 0.41));
+.bg-classic-gradient {
+	background: linear-gradient(90deg, rgb(255, 252, 226), rgb(255, 220, 253));
 }
 
 a {
