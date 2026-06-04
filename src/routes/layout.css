@@ -48,4 +48,5 @@ h2 {
 	--font-forum: 'Forum';
 	--font-alice: 'Forum';
 	--font-fancy: 'Herr Von Muellerhoff';
+	--color-accent: var(--color-gray-400);
 }

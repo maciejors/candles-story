@@ -2,6 +2,7 @@ import { supabase } from '../config';
 import type Product from '$lib/models/Product';
 
 export async function fetchAllProducts(): Promise<Product[]> {
+	await new Promise((r) => setTimeout(r, 10000));
 	const { data, error } = await supabase
 		.from('product_display_order')
 		.select(

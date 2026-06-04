@@ -2,8 +2,19 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import { resolve } from '$app/paths';
+	import { QueryClient, QueryClientProvider } from '@tanstack/svelte-query';
 
 	let { children } = $props();
+
+	const CACHE_SECONDS = 60 * 60 * 1000; // 1h
+	const queryClient = new QueryClient({
+		defaultOptions: {
+			queries: {
+				staleTime: CACHE_SECONDS,
+				gcTime: CACHE_SECONDS,
+			},
+		},
+	});
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
@@ -13,8 +24,9 @@
 		<a href={resolve('/about')}>O świecach</a>
 		<a href={resolve('/candles')}>Stwórz zamówienie</a>
 	</nav>
-	{@render children()}
-	<footer class="mt-2 w-full p-2 text-center text-gray-400">2026 Candles Story</footer>
+	<QueryClientProvider client={queryClient}>
+		{@render children()}
+	</QueryClientProvider>
 </div>
 
 <style>

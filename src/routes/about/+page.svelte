@@ -1,3 +1,7 @@
+<script>
+	import Footer from '$lib/components/Footer.svelte';
+</script>
+
 <div class="flex w-full flex-col items-center gap-10 p-2">
 	<header>
 		<h1>O Swiecach</h1>
@@ -53,6 +57,8 @@
 				<li>Nie pal świecy w pobliżu materiałów łatwopalnych.</li>
 			</ul>
 		</section>
+
+		<Footer />
 	</main>
 </div>
 
