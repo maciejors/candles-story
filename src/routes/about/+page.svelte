@@ -10,7 +10,7 @@
 
 	<main class="flex w-full flex-col items-center gap-10">
 		<section>
-			<h2>Świece sojowe</h2>
+			<h2>Swiece sojowe</h2>
 			<p>Tutaj bym napisał dlaczego świece sojowe są super</p>
 		</section>
 
@@ -25,7 +25,7 @@
 		</section>
 
 		<section>
-			<h2>Wysyłka</h2>
+			<h2>Wysylka</h2>
 			<p>
 				Zamówienie jest wysyłane przez InPost, a cena różni się w zależności od wielkości przesyłki.
 				Czas realizacji zamówienia jest ustalany indywidualnie.
@@ -48,7 +48,7 @@
 		</section>
 
 		<section>
-			<h2>Bezpieczeństwo</h2>
+			<h2>Bezpieczenstwo</h2>
 			<ul>
 				<li>Unikaj zbyt długiego czasu palenia, zalecane jest nie więcej niż 4h.</li>
 				<li>Nigdy nie zostawiaj palącej się świecy bez nadzoru.</li>
