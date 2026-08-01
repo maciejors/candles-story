@@ -24,7 +24,7 @@
 		<div transition:fade={{ duration: 400 }}>
 			<ul>
 				{#each query.data as product (product.id)}
-					<ProductListItem {product} />
+					<ProductListItem {product} count={0} onAdd={() => {}} onRemove={() => {}} />
 				{/each}
 			</ul>
 			<Footer />

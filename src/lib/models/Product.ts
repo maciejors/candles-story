@@ -20,7 +20,7 @@ export interface PackagingOption {
 
 export default interface Product {
 	id: number;
-	mainPictureUrl: number;
+	mainPictureUrl: string;
 	name: string;
 	categoryId: number;
 	category: Category;

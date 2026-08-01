@@ -5,6 +5,10 @@
 	background: linear-gradient(90deg, rgb(255, 252, 226), rgb(255, 220, 253));
 }
 
+body {
+	color: var(--color-gray-900);
+}
+
 a {
 	cursor: pointer;
 }
@@ -47,5 +51,8 @@ h2 {
 	--font-forum: 'Forum', sans-serif;
 	--font-alice: 'Alice', sans-serif;
 	--font-fancy: 'Herr Von Muellerhoff', sans-serif;
-	--color-accent: var(--color-gray-400);
+	--color-accent: var(--color-gray-300);
+	--color-primary: rgb(255, 252, 226);
+	--color-secondary: rgb(255, 220, 253);
+	--color-supplementary: var(--color-gray-500);
 }
