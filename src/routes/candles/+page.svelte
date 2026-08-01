@@ -11,6 +11,25 @@
 		queryKey: ['products'],
 		queryFn: fetchAllProducts,
 	}));
+
+	// Track cart item quantities by productId
+	let cart = $state<Record<number, number>>({});
+
+	function addToCart(productId: number) {
+		if (cart[productId] === undefined) {
+			cart[productId] = 1;
+		} else {
+			cart[productId]++;
+		}
+	}
+
+	function removeFromCart(productId: number) {
+		if (cart[productId] > 1) {
+			cart[productId]--;
+		} else {
+			delete cart[productId];
+		}
+	}
 </script>
 
 <main>
@@ -24,7 +43,12 @@
 		<div transition:fade={{ duration: 400 }}>
 			<ul>
 				{#each query.data as product (product.id)}
-					<ProductListItem {product} count={0} onAdd={() => {}} onRemove={() => {}} />
+					<ProductListItem
+						{product}
+						count={cart[product.id] || 0}
+						onAdd={() => addToCart(product.id)}
+						onRemove={() => removeFromCart(product.id)}
+					/>
 				{/each}
 			</ul>
 			<Footer />
