@@ -33,6 +33,7 @@
 		"prettier": "^3.8.1",
 		"prettier-plugin-svelte": "^3.5.1",
 		"prettier-plugin-tailwindcss": "^0.7.2",
+		"supabase": "^2.102.0",
 		"svelte": "^5.55.2",
 		"svelte-check": "^4.4.6",
 		"tailwindcss": "^4.2.2",
@@ -43,6 +44,7 @@
 		"vitest-browser-svelte": "^2.1.0"
 	},
 	"dependencies": {
-		"firebase": "^12.13.0"
+		"@supabase/supabase-js": "^2.106.2",
+		"@tanstack/svelte-query": "^6.1.34"
 	}
 }
