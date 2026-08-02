@@ -22,7 +22,6 @@ export default interface Product {
 	id: number;
 	mainPictureUrl: string;
 	name: string;
-	categoryId: number;
 	category: Category;
 	weightGrams?: number;
 	basePrice?: number;

@@ -64,7 +64,6 @@ export async function fetchAllProducts(): Promise<Product[]> {
 			return {
 				id: p.id,
 				name: p.name,
-				categoryId: p.category_id,
 				category: {
 					id: p.categories.id,
 					name: p.categories.name,
